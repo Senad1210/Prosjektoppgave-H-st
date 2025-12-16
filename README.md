@@ -60,8 +60,6 @@ En mulig MVP kan inneholde:
 
 #### Brukerstøtte
 - Lage brukerveiledning og FAQ
-- Feilsøking av vanlige problemer
-- Teste løsning og gi anbefalinger til forbedringer
 
 ---
 
