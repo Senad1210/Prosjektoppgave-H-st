@@ -1,58 +1,64 @@
 # Prosjektoppgave-H-st
 Terminoppgave_VG2_Høst
 
-Sosiale medier chatting website. (Chit Chat)
-Dette prosjektet skal være en enkel chatting nettside der brukere kan se lage en bruker, legge til venner å chatte/snakke med dem.
+Sosiale medier chatting website (Chit Chat)
 
-I dette prosjektet skal jeg jobbe med å lage en Christmas Nettbutikk der man kan kjøpe ting som:
+Dette prosjektet er en enkel chatting-nettside der brukere kan lage en konto, legge til venner og chatte med dem i sanntid.
 
-- Julepynt
-- Gaver
-- Julemat og snacks
-- Gavekort
-- og mer
+I dette prosjektet skal jeg lage en sosial medieplattform som tilbyr:
+
+### Sider:
+- Hjemmeside / feed
+- Kontakter / venneliste
+- Innstillinger / profil
+- Chat-vindu
+
+### Funksjonalitet:
+- Opprette en bruker
+- Logge inn / autentisering
+- Se om andre brukere er online
+- Sende meldinger og bilder
+- Legge til andre brukere som venn
 
 ---
 
-
-
-
-
-Prosjektet skal fungere som en prototype/MVP (Minimum Viable Product), hvor hovedfokuset er å vise struktur, funksjonalitet og kompetanse innen Utvikling, Drift og Brukerstøtte.
+Prosjektet skal fungere som en prototype/MVP (Minimum Viable Product), med fokus på å vise struktur, funksjonalitet og kompetanse innen Utvikling, Drift og Brukerstøtte.
 
 En mulig MVP kan inneholde:
-- Produktside med liste over juleprodukter
-- Handlekurv-funksjon
-- Enkel “betalingsside” (uten ekte betaling)
-- Admin-panel eller database for å legge til produkter
+- Brukerregistrering og login
+- Liste over venner og online-status
+- Sanntidschat med tekstmeldinger og bilder
+- Enkel innstillingsside for profil
 
 ---
 
-
 ### Språk, Teknologier og Utstyr
-| Teknologi / Utstyr               | Bruk                                                |
-| -------------------------------- | --------------------------------------------------- |
-| **Python + Flask**               | Backend / webserver på Raspberry Pi                 |
-| **MariaDB**                      | Database for lagring og henting av produkter        |
-| **HTML, CSS, JavaScript**        | Frontend – vise produkter, handlekurv og navigasjon |
-| **Git + GitHub**                 | Versjonskontroll og dokumentasjon                   |
-| **Raspberry Pi**                 | Infrastruktur, hosting av webserver og database     |
-| **Figma**                        | Skisse/design av nettsiden                          |
-| **Vercel / Netlify** (valgfritt) | Alternativ hosting for frontend-testing             |
+| Teknologi / Utstyr               | Bruk                                                   |
+| -------------------------------- | ----------------------------------------------------- |
+| **Python + Flask**               | Backend / webserver                                   |
+| **MariaDB / SQLite**             | Database for lagring av brukere, venner og meldinger |
+| **HTML, CSS, JavaScript**        | Frontend – vise chat, kontakter og innstillinger     |
+| **Socket.IO / WebSockets**       | Sanntidskommunikasjon mellom brukere                 |
+| **Git + GitHub**                 | Versjonskontroll og dokumentasjon                    |
+| **Raspberry Pi / lokal server**  | Infrastruktur, hosting av webserver og database     |
+| **Figma**                        | Skisse/design av nettsiden                            |
+| **Vercel / Netlify** (valgfritt) | Alternativ hosting for frontend-testing              |
 
 ---
 
 ### Kompetanse i fagene
 #### Utvikling
 - Lage frontend og backend som kommuniserer via API-er
-- Strukturere koden med funksjoner, lister, løkker og if-tester
-- Bruke database til å lagre og hente produkter
-  
+- Strukturere koden med funksjoner, klasser og logikk
+- Bruke database til å lagre og hente brukere, venner og meldinger
+- Implementere sanntidschat via WebSockets
+
 #### Drift
-- Sette opp Raspberry Pi som webserver
-- Installere og konfigurere MariaDB
+- Sette opp server (Raspberry Pi eller alternativ hosting)
+- Installere og konfigurere MariaDB / SQLite
 - Holde tjenesten kjørende via systemd / Nginx
-  
+- Håndtere sikkerhet og tilgangskontroll
+
 #### Brukerstøtte
 - Lage brukerveiledning og FAQ
 - Feilsøking av vanlige problemer
@@ -60,23 +66,27 @@ En mulig MVP kan inneholde:
 
 ---
 
+### Figma-skisse
+- Hjemmeside med chat-feed
+- Kontakter-side med online-status
+- Chat-vindu med meldinger og bildeopplasting
+- Innstillingsside med profil og preferanser
 
-#### Figma-skisse
-- Forside med produkter og juletema
-- Handlekurv-ikon og checkout-knapp
-- Admin-side for å legge til produkter
+---
 
-
-#### Utkast til mappestruktur
+### Utkast til mappestruktur
 ```bash
-christmas-nettbutikk/
+chit-chat/
 ├── backend/
 │   ├── app.py
 │   ├── models.py
+│   ├── routes.py
 │   ├── templates/
 │   │   ├── index.html
-│   │   ├── product.html
-│   │   └── cart.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   ├── contacts.html
+│   │   └── chat.html
 │   └── static/
 │       ├── css/
 │       ├── js/
@@ -98,8 +108,3 @@ christmas-nettbutikk/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
-
-
-
-
