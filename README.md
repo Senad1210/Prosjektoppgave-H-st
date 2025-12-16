@@ -70,37 +70,20 @@ En mulig MVP kan inneholde:
 
 ---
 
-### Utkast til mappestruktur
+### Utkast til mappestruktur (vil oppdateres underveis)
 ```bash
-chit-chat/
-├── backend/
-│   ├── app.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── templates/
-│   │   ├── index.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── contacts.html
-│   │   └── chat.html
-│   └── static/
-│       ├── css/
-│       ├── js/
-│       └── images/
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-├── db/
-│   ├── schema.sql
-│   └── seed.sql
-├── docs/
-│   ├── brukerveiledning.md
-│   └── teknisk_dokumentasjon.md
-├── .gitignore
-├── README.md
-└── requirements.txt
+ChitChat/
+├── ui/
+│   ├── fonts
+│   │   ├── OpenSans-Regular
+│   │   └── Summer-Vibes-OTF
+│   ├── icons
+│   │   ├── Chat.png
+│   │   ├── Contacts.png
+│   │   ├── Settings.png
+│   └── images
+│       ├── user1.jpeg
+│       ├── user2.jpeg
+│       └── user3.jpeg
+├── index.html  (inline css)
+└── signup.html (inline css)
