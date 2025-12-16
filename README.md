@@ -53,9 +53,8 @@ En mulig MVP kan inneholde:
 - Implementere sanntidschat via WebSockets
 
 #### Drift
-- Sette opp server (Raspberry Pi eller alternativ hosting)
-- Installere og konfigurere MariaDB / SQLite
-- Holde tjenesten kjørende via systemd / Nginx
+- Sette opp server (Raspberry Pi)
+- Installere og konfigurere MariaDB / SQL
 - Håndtere sikkerhet og tilgangskontroll
 
 #### Brukerstøtte
