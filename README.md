@@ -38,7 +38,6 @@ En mulig MVP kan inneholde:
 | **Python + Flask**               | Backend / webserver                                   |
 | **MariaDB / SQL**             | Database for lagring av brukere, venner og meldinger |
 | **HTML, CSS, JavaScript**        | Frontend – vise chat, kontakter og innstillinger     |
-| **Socket.IO / WebSockets**       | Sanntidskommunikasjon mellom brukere                 |
 | **Git + GitHub**                 | Versjonskontroll og dokumentasjon                    |
 | **Raspberry Pi / lokal server**  | Infrastruktur, hosting av webserver og database     |
 | **Figma**                        | Skisse/design av nettsiden                            |
