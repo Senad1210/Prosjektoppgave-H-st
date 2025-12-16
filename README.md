@@ -36,7 +36,7 @@ En mulig MVP kan inneholde:
 | Teknologi / Utstyr               | Bruk                                                   |
 | -------------------------------- | ----------------------------------------------------- |
 | **Python + Flask**               | Backend / webserver                                   |
-| **MariaDB / SQLite**             | Database for lagring av brukere, venner og meldinger |
+| **MariaDB / SQL**             | Database for lagring av brukere, venner og meldinger |
 | **HTML, CSS, JavaScript**        | Frontend – vise chat, kontakter og innstillinger     |
 | **Socket.IO / WebSockets**       | Sanntidskommunikasjon mellom brukere                 |
 | **Git + GitHub**                 | Versjonskontroll og dokumentasjon                    |
