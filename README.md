@@ -1,4 +1,4 @@
-# Prosjektoppgave-H-st
+# Prosjektoppgave-Host
 Terminoppgave_VG2_Høst
 
 Sosiale medier chatting website (Chit Chat)
