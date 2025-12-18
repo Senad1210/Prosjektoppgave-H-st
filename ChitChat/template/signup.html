@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        @font-face { font-family: headFont; src: url(ui/fonts/Summer-Vibes-OTF.otf); }
+        @font-face { font-family: myFont; src: url(ui/fonts/OpenSans-Regular.ttf); }
+
+        body {
+            font-family: myFont;
+            background-color: #f0f0f0; 
+        }
+
+        #wrapper {
+            max-width: 400px; 
+            margin: auto; 
+            padding: 20px; 
+            background: white; 
+            border-radius: 5px; 
+            margin-top:50px; 
+        }
+
+        #header {
+            font-family: headFont; 
+            font-size: 32px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+
+        input {
+            width: 100%; 
+            padding: 10px; 
+            margin: 5px 0; 
+            border-radius: 5px; 
+            border: 1px solid grey; 
+        }
+
+        input[type="submit"] { 
+            background-color: #2b5488; 
+            color: white; 
+            cursor: pointer; 
+        }
+        
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">Sign Up</div>
+    <form id="signupForm">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="number" name="userid" placeholder="User ID" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    <div id="message" style="margin-top:10px; color:green;"></div>
+</div>
+
+<script>
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        fetch('/users', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(resp => resp.text())
+        .then(msg => {
+            document.getElementById('message').textContent = msg;
+            form.reset();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div>
+    <h3>test</h3>
+    <input type="text" id="mytextbox" class="myclass" placeholder="Type something">
+    <input type="button" id="mybutton" value="Click me" class="myclass">
+</div>
+
+<script type="text/javascript">
+    document.getElementById("mybutton").addEventListener("click", function(e) {
+        alert("Button clicked: " + e.target.id);
+    });
+</script>

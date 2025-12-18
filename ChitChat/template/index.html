@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Chat</title>
+    <style>
+        @font-face {
+            font-family: headFont;
+            src: url(ui/fonts/Summer-Vibes-OTF.otf);
+        }
+        @font-face {
+            font-family: myFont;
+            src: url(ui/fonts/OpenSans-Regular.ttf);
+        }
+
+        body {
+            margin: 0;
+            font-family: myFont;
+            background-color: #e0f0e0;
+        }
+
+        #wrapper {
+            max-width: 900px;
+            display: flex;
+            margin: auto;
+            color: white;
+        }
+
+        #left_pannel {
+            min-height: 500px;
+            background-color: #1f3d2b;
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #profile_image {
+            width: 50%;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+
+        #left_pannel label {
+            width: 100%;
+            display: block;
+            background-color: #2f5d46;
+            border-bottom: 1px solid #ffffff55;
+            cursor: pointer;
+            padding: 5px;
+            margin-top: 5px;
+            transition: all 0.3s ease;
+        }
+
+        #left_pannel label:hover {
+            background-color: #6fae8f;
+        }
+
+        #right_pannel {
+            min-height: 500px;
+            flex: 4;
+            text-align: center;
+        }
+
+        #header {
+            background-color: #2e6b4f;
+            height: 70px;
+            font-size: 40px;
+            text-align: center;
+            font-family: headFont;
+            line-height: 70px;
+        }
+
+        #inner_left_pannel {
+            background-color: #3f6f5a;
+            flex: 1;
+            min-height: 430px;
+            overflow-y: auto;
+            padding: 5px;
+        }
+
+        #inner_right_pannel {
+            background-color: #f1f8f4;
+            flex: 2;
+            min-height: 430px;
+            overflow-y: auto;
+            color: #1f3d2b;
+            padding: 10px;
+        }
+
+        #container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="left_pannel">
+        <img id="profile_image" src="ui/images/user3.jpg" alt="Profile">
+        <br>John Doe<br>
+        <span style="font-size: 12px; opacity: 0.5;">johndoe@gmail.com</span>
+        <br><br>
+        <label id="label_chat">Chat</label>
+        <label id="label_contacts">Contacts</label>
+        <label id="label_settings">Settings</label>
+    </div>
+
+    <div id="right_pannel">
+        <div id="header">My Chat</div>
+        <div id="container">
+            <div id="inner_left_pannel"></div>
+            <div id="inner_right_pannel"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadFileContent() {
+        fetch('/file', { method: 'POST' })
+            .then(resp => resp.text())
+            .then(html => {
+                document.getElementById('inner_left_pannel').innerHTML = html;
+            });
+    }
+
+    document.getElementById('label_chat').addEventListener('click', loadFileContent);
+
+    // Fetch all users from backend
+    function getUsers() {
+        fetch('/users')
+            .then(resp => resp.json())
+            .then(data => {
+                const container = document.getElementById('inner_right_pannel');
+                container.innerHTML = '<h3>Users:</h3>';
+                data.forEach(u => {
+                    container.innerHTML += `<p>${u.username} (${u.email})</p>`;
+                });
+            });
+    }
+
+    // Load users on page load
+    window.onload = getUsers;
+</script>
+</body>
+</html>
