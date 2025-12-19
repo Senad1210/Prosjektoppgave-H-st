@@ -1,0 +1,18 @@
+Mandag
+I dag gikk jeg gjennom tilbakemeldingen jeg fikk fra fagsamtalen og sjekket hva jeg skulle jobbe med denne uken. Oppgaven for uken var å få frontend, backend og database til å kommunisere med hverandre.
+Jeg startet med Flask, og valgte å begynne med frontend fordi jeg synes det er den enkleste delen. Etter hvert var planen å koble databasen til Flask. Jeg hadde tidligere en ganske god forståelse av Flask fra da vi jobbet med det før, men jeg har glemt litt. Derfor brukte jeg tid på å repetere og jobbe med å koble frontend til Flask-serveren.
+Jeg startet med å lage @app.route til alle sidene som skulle brukes. I tillegg valgte jeg å bruke render_template, noe jeg også gjorde. Denne dagen lagde jeg et grunnleggende Flask-oppsett med de viktigste kodene og ruter for applikasjonen.
+
+Tirsdag
+I dag lagde jeg raskt en database med navnet chitchat_db og en tabell som heter users. Denne tabellen skal inneholde brukere som registrerer seg på nettsiden. Jeg brukte datatype BIGINT fordi databasen kan få mange brukere. BIGINT har 64-bit, mens INT bare har 32-bit.
+Det tok meg omtrent 10–15 minutter å lage databasen, og jeg ble ferdig ganske raskt. Selv om jeg vet at denne nettsiden sannsynligvis ikke vil få hundrevis av brukere, ønsket jeg å vise mer kompetanse i Flask og databasedesign. Derfor la jeg også til ADD INDEX på de viktigste feltene i databasen for bedre ytelse.
+
+Onsdag
+I dag jobbet jeg med å koble databasen til Flask-serveren. Det første jeg ønsket å gjøre var å laste ned VS Code på Raspberry Pi-en, slik at det blir lettere å programmere når både MariaDB og prosjektfilene er på samme enhet. Da slipper jeg også å jobbe fra skole-PC-en og stadig skrive
+ssh senad@10.2.3.17 for å logge inn.
+Etter dette så jeg på uke 46-videoen der Erik viser hvordan man kobler en database til Flask. Han hadde en prosjektmappe på sin Raspberry Pi, som jeg også lagde via skole-PC-en. For å få tilgang til denne mappen måtte jeg bruke VS Code på Pi-en, men her støtte jeg på et stort problem.
+Hele dagen prøvde jeg å laste ned VS Code på Raspberry Pi uten å lykkes. Jeg prøvde både å laste det ned manuelt fra nettsiden deres og via terminalen. Jeg brukte flere timer på dette, men klarte fortsatt ikke å få det til å fungere. Jeg prøvde til og med å bytte operativsystem, uten hell. Til slutt tok jeg med Raspberry Pi-en hjem for å prøve å løse problemet videre.
+
+Torsdag
+Etter problemene jeg hadde dagen før, visste jeg ikke helt hva jeg skulle gjøre i dag. Det jeg bestemte meg for var å fullføre Flask-applikasjonen uten å koble den til databasen. Jeg måtte vise kompetanse i Flask på en eller annen måte.
+Derfor jobbet jeg videre med Flask uten databasekobling og bygde ferdig strukturen slik applikasjonen ville sett ut uten databasen tilkoblet.
